@@ -1,164 +1,382 @@
 # SettleWise AI
-### *Smarter Settlements. Stronger Business.*
+### Smarter Settlements. Stronger Business.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PayPal](https://img.shields.io/badge/PayPal-REST%20v2%20Sandbox-003087)](https://developer.paypal.com)
-[![AG Grid](https://img.shields.io/badge/AG%20Grid-Community-brightgreen)](https://www.ag-grid.com)
-[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-3.8%20Flash-4285F4)](https://ai.google.dev)
-[![Render](https://img.shields.io/badge/Deploy-Render%20Blueprint-46E3B7)](https://render.com)
+An AI-powered financial reconciliation and settlement intelligence platform that helps businesses match payments with invoices, investigate financial discrepancies, detect unusual transaction patterns, and manage payment workflows with human approval.
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License" />
+  <img src="https://img.shields.io/badge/PayPal-REST%20API%20Sandbox-003087" alt="PayPal" />
+  <img src="https://img.shields.io/badge/AG%20Grid-Community-brightgreen" alt="AG Grid" />
+  <img src="https://img.shields.io/badge/AI-Google%20Gemini-4285F4" alt="Google Gemini" />
+  <img src="https://img.shields.io/badge/Deployment-Render-46E3B7" alt="Render" />
+</p>
 
-## 📌 Executive Summary
+## Overview
 
-**SettleWise AI** is an intelligent financial reconciliation and settlement operations platform designed for mid-market and enterprise businesses. It pairs **PayPal Sandbox payment infrastructure** with **deterministic weighted reconciliation algorithms** and **Google Gemini AI forensic investigations**.
+Financial reconciliation is often time-consuming. Businesses may receive payments that do not immediately match their invoices because of reference mismatches, partial payments, duplicate transactions, delayed settlements, or incorrect amounts.
 
-Unlike standard dashboards or generic chatbot wrappers, SettleWise AI implements a production-grade financial workflow:
-1. **Captures and processes live PayPal Sandbox orders & webhooks**.
-2. **Executes deterministic multi-signal matching** with decimal arithmetic across invoice numbers, decimal balances, payer identities, date proximity, and memo tokens.
-3. **Forensically flags financial anomalies** (duplicate payment candidates, unexpected currency conversions, volume outliers, repeated failed attempts).
-4. **Performs context-grounded AI investigations** via server-side Gemini 3.8 Flash, yielding structured root-cause explanations and evidence breakdowns.
-5. **Enforces human-in-the-loop governance** where no financial transfer, refund, or settlement is executed without explicit CFO sign-off and an immutable audit trail.
+**SettleWise AI** addresses this challenge through deterministic financial matching, AI-assisted investigation, and PayPal payment integration.
 
----
+Rather than relying on a generic AI chatbot, the platform combines rule-based financial calculations with contextual AI intelligence to make reconciliation more transparent and actionable.
 
-## 🏆 Hackathon Sponsor Integrations
+### What SettleWise AI Does
 
-| Sponsor Tool | Role & Category | Specific Feature Implementation |
-|---|---|---|
-| **PayPal** | **Core Infrastructure** (Mandatory) | Official PayPal REST API v2: OAuth 2.0 client credential authentication, Order creation (`/v2/checkout/orders`), Payment capture (`/v2/checkout/orders/{id}/capture`), and Webhook signature verification (`/v1/notifications/verify-webhook-signature`). Transparent sandbox indicator with zero fake payment claims. |
-| **AG Grid** | **Priority Sponsor Prize** | AG Grid Community embedded in Transaction Management: multi-column sorting, column filters, quick text search, pagination, custom risk renderers, and CSV export. |
-| **APIMatic** | **Priority Sponsor Prize** | Integrated APIMatic Context Plugin (`npx context-plugins install paypal`) providing verified PayPal endpoint contracts, OAuth request schemas, and error definitions. |
-| **Render** | **Priority Sponsor Prize** | Infrastructure-as-code `render.yaml` Blueprint defining web service (Vite + Node/Express), Python FastAPI backend, and managed PostgreSQL database. |
-| **Postman** | **Additional Sponsor Tool** | Comprehensive `settlewise.postman_collection.json` containing automated test suites for OAuth, Orders, Captures, Webhooks, Reconciliation, and AI Copilot endpoints. |
+- **Payment Reconciliation:** Matches PayPal transactions with business invoices using multiple financial and contextual signals.
+- **Intelligent Matching:** Calculates matching confidence using invoice references, amounts, customer identity, dates, and description similarity.
+- **Anomaly Detection:** Identifies potential duplicate payments, amount discrepancies, unusual transaction volumes, and repeated failed attempts.
+- **AI Investigation:** Uses Google Gemini to generate contextual explanations and evidence-based investigation summaries.
+- **Settlement Management:** Organizes settlement recommendations and approval workflows.
+- **Human-in-the-Loop Governance:** Keeps financial decisions under user control instead of allowing AI to independently execute sensitive actions.
 
----
+## Key Features
 
-## 🏛️ System Architecture
+| Feature | Description |
+|---|---|
+| Financial Dashboard | Overview of payment volume, reconciliation status, outstanding invoices, and financial trends |
+| Transaction Explorer | Searchable and filterable transaction management using AG Grid |
+| Reconciliation Engine | Weighted matching across multiple transaction and invoice attributes |
+| Anomaly Intelligence | Rule-based detection of suspicious or unusual financial patterns |
+| AI Investigation | Gemini-powered explanations and structured investigation reports |
+| Invoice Management | Track invoice amounts, due dates, partial payments, and outstanding balances |
+| Settlement Center | Review and approve settlement-related actions |
+| PayPal Integration | Sandbox order creation, payment capture, and webhook processing |
+| Audit Trail | Maintain a record of important reconciliation and approval activities |
 
+## Technology Stack
+
+### Frontend
+- React
+- JavaScript / TypeScript
+- Tailwind CSS
+- AG Grid Community
+- Recharts
+
+### Backend
+- Python
+- FastAPI
+- REST APIs
+- SQL database (SQLite / PostgreSQL)
+
+### AI & Intelligence
+- Google Gemini API
+- Deterministic weighted reconciliation algorithm
+- Rule-based anomaly detection
+- Structured AI investigation responses
+
+### Payment Infrastructure
+- PayPal REST API v2
+- PayPal Sandbox
+- OAuth 2.0
+- Orders API
+- Payment Capture API
+- Webhooks
+
+### Developer Tools & Deployment
+- APIMatic Context Plugin
+- Postman
+- GitHub
+- Render
+
+## System Architecture
+
+```text
+                 ┌──────────────────────────────┐
+                 │       React Frontend         │
+                 │                              │
+                 │ Dashboard · AG Grid          │
+                 │ Reconciliation · Analytics   │
+                 │ AI Investigation · Reports   │
+                 └──────────────┬───────────────┘
+                                │
+                         REST API / HTTPS
+                                │
+                                ▼
+                 ┌──────────────────────────────┐
+                 │       FastAPI Backend        │
+                 │                              │
+                 │ Authentication & APIs        │
+                 │ Business Logic               │
+                 └──────────────┬───────────────┘
+                                │
+           ┌────────────────────┼────────────────────┐
+           │                    │                    │
+           ▼                    ▼                    ▼
+ ┌──────────────────┐ ┌──────────────────┐ ┌──────────────────┐
+ │ Reconciliation   │ │ Anomaly Detection│ │ Settlement       │
+ │ Engine           │ │ Engine           │ │ Governance       │
+ │                  │ │                  │ │                  │
+ │ Weighted Scoring │ │ Duplicate Checks │ │ Human Approval   │
+ │ Amount Matching  │ │ Volume Analysis  │ │ Audit Logging    │
+ │ Identity Matching│ │ Failed Attempts  │ │ Payment Actions  │
+ └────────┬─────────┘ └────────┬─────────┘ └────────┬─────────┘
+          │                    │                    │
+          └────────────────────┼────────────────────┘
+                               │
+                 ┌─────────────┴─────────────┐
+                 │                           │
+                 ▼                           ▼
+       ┌──────────────────┐       ┌──────────────────┐
+       │ PayPal Sandbox   │       │ Google Gemini    │
+       │                  │       │                  │
+       │ OAuth 2.0        │       │ AI Investigations│
+       │ Orders & Capture │       │ Structured Output│
+       │ Webhooks         │       │ Evidence Analysis│
+       └──────────────────┘       └──────────────────┘
+
+                    ┌────────────────────┐
+                    │ Persistent Database│
+                    │ Invoices           │
+                    │ Transactions       │
+                    │ Matches & Logs     │
+                    │ Approval Records   │
+                    └────────────────────┘
 ```
-                  ┌──────────────────────────────────────────────┐
-                  │          React 19 + Tailwind Client          │
-                  │   AG Grid · Recharts · Forensic Drawers     │
-                  └──────────────────────┬───────────────────────┘
-                                         │ REST API / Axios
-                                         ▼
-┌────────────────────────────────────────────────────────────────────────────────┐
-│                      Express + Node / FastAPI Backend Layer                     │
-├─────────────────────────┬─────────────────────────────┬────────────────────────┤
-│   Reconciliation Engine │    Forensic Anomaly Engine  │   Settlement Governor  │
-│  Deterministic Scoring: │    Duplicate Detection      │   Human Sign-off       │
-│   · Invoice Ref (35%)   │    Volume Spikes            │   PayPal Action Auth   │
-│   · Amount Match (30%)  │    FX Currency Discrepancy  │   Immutable Audit Log  │
-│   · Identity Match (15%)│    Failed Bursts            │                        │
-│   · Date Proximity (10%)│                             │                        │
-│   · Token Sim (10%)     │                             │                        │
-└────────────┬────────────┴──────────────┬──────────────┴───────────┬────────────┘
-             │                           │                          │
-             ▼                           ▼                          ▼
-┌─────────────────────────┐ ┌─────────────────────────┐ ┌───────────────────────┐
-│ PayPal Sandbox REST API │ │ Google Gemini 3.8 Flash │ │ Persistent Data Store │
-│ Orders · Captures · WH  │ │ Structured JSON Reports │ │ Invoices, Txns, Logs  │
-└─────────────────────────┘ └─────────────────────────┘ └───────────────────────┘
-```
 
----
+## Reconciliation Intelligence
 
-## ⚙️ Environment Configuration
+SettleWise AI uses a deterministic weighted scoring algorithm to evaluate possible invoice-payment matches.
 
-Create a `.env` file in the root directory (based on `.env.example`):
+### Matching Signals
+
+| Signal | Weight |
+|---|---:|
+| Invoice Reference Match | 35% |
+| Amount Match | 30% |
+| Customer Identity Match | 15% |
+| Date Proximity | 10% |
+| Description Similarity | 10% |
+| **Total** | **100%** |
+
+### Confidence Interpretation
+
+| Confidence Score | Recommended Status |
+|---|---|
+| 90–100% | High-confidence match candidate |
+| 70–89% | Requires review |
+| Below 70% | Manual investigation |
+
+These scores represent matching confidence, not proof of payment authenticity. Ambiguous matches require human review.
+
+Financial amounts are handled using decimal arithmetic to avoid floating-point precision errors.
+
+## AI-Powered Financial Investigation
+
+Google Gemini adds contextual intelligence to the reconciliation workflow.
+
+The AI investigation layer can help:
+
+- Explain why a transaction did not match an invoice.
+- Summarize potential payment discrepancies.
+- Identify relevant matching signals.
+- Explain anomaly detection results.
+- Recommend appropriate investigation steps.
+- Generate structured financial investigation reports.
+
+**Important design principle:** Financial calculations, matching decisions, and transaction state changes remain controlled by deterministic backend logic. Gemini provides explanations and recommendations; it does not independently approve payments or modify financial records.
+
+## PayPal Integration
+
+SettleWise AI integrates with the official PayPal REST API v2 Sandbox environment.
+
+### Supported Integration Workflows
+
+1. OAuth 2.0 client credential authentication.
+2. PayPal Sandbox order creation.
+3. Order retrieval and approval workflow.
+4. Payment capture.
+5. Webhook event handling.
+6. Webhook signature verification.
+7. Payment event deduplication.
+
+### API Endpoints Used
+
+| Operation | PayPal Endpoint |
+|---|---|
+| Create Order | `POST /v2/checkout/orders` |
+| Capture Order | `POST /v2/checkout/orders/{id}/capture` |
+| Verify Webhook | `POST /v1/notifications/verify-webhook-signature` |
+
+All payment operations use Sandbox credentials during development and demonstration.
+
+A successful API response is required before the application reports an order or capture as successful.
+
+## Sponsor Tool Integrations
+
+| Tool | Role in the Project |
+|---|---|
+| PayPal | Core payment infrastructure through REST API v2 Sandbox |
+| AG Grid Community | Interactive transaction and reconciliation tables |
+| APIMatic | PayPal API context and developer integration support |
+| Render | Application hosting and deployment |
+| Postman | API testing and workflow validation |
+| Google Gemini | AI-assisted financial investigations |
+
+Only integrations actually configured and demonstrated in the submitted application should be represented as completed integrations.
+
+## Getting Started
+
+### Prerequisites
+
+Install the following before running the project:
+
+- Node.js and npm
+- Python 3.10+
+- Git
+- PayPal Developer Sandbox account
+- Google Gemini API key
+
+### 1. Clone the Repository
 
 ```bash
-# Application Port & URLs
-PORT=3000
-FRONTEND_URL=http://localhost:3000
+git clone https://github.com/YOUR_USERNAME/SettleWise-AI.git
+
+cd SettleWise-AI
+```
+
+### 2. Configure Environment Variables
+
+Create a `.env` file using the provided `.env.example`.
+
+```env
+# Application
 APP_ENV=development
+FRONTEND_URL=http://localhost:5173
 
-# Google Gemini API
+# Google Gemini
 GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-3.8-flash
+GEMINI_MODEL=your_supported_gemini_model
 
-# PayPal Sandbox Developer Credentials
-# Obtain from https://developer.paypal.com/dashboard/applications/sandbox
+# PayPal Sandbox
 PAYPAL_CLIENT_ID=your_sandbox_client_id
 PAYPAL_CLIENT_SECRET=your_sandbox_client_secret
 PAYPAL_BASE_URL=https://api-m.sandbox.paypal.com
 PAYPAL_WEBHOOK_ID=your_webhook_id
 
-# Database (for standalone FastAPI / PostgreSQL deployment)
+# Database
 DATABASE_URL=sqlite:///./settlewise.db
-SECRET_KEY=replace_with_secure_random_key_for_production
+
+# Security
+SECRET_KEY=replace_with_a_secure_random_secret
 ```
 
-> **Note:** If PayPal or Gemini credentials are not supplied, the platform runs seamlessly in **Sandbox Standby & Demonstration Mode**, providing full simulation of PayPal order creation, captures, webhooks, and deterministic financial forensics without crashing or faking live connections.
+Never commit your actual `.env` file or API credentials to GitHub.
 
----
+### 3. Start the Backend
 
-## 🚀 Quick Start (Local Development)
-
-### 1. Install Dependencies
 ```bash
+cd backend
+
+python -m venv venv
+```
+
+Activate the environment:
+
+**Windows:**
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS:**
+```bash
+source venv/bin/activate
+```
+
+Install dependencies and start FastAPI:
+
+```bash
+pip install -r requirements.txt
+
+uvicorn app.main:app --reload --port 8000
+```
+
+Backend API documentation:
+
+`http://localhost:8000/docs`
+
+### 4. Start the Frontend
+
+Open another terminal:
+
+```bash
+cd frontend
+
 npm install
-```
 
-### 2. Install APIMatic Context Plugin
-```bash
-npx context-plugins install paypal
-```
-
-### 3. Start Full-Stack Development Server
-```bash
 npm run dev
 ```
-Open **`http://localhost:3000`** in your browser.
 
-### 4. Build for Production
-```bash
-npm run build
-npm start
-```
+Open the local frontend URL printed by Vite, usually:
 
----
+`http://localhost:5173`
 
-## 🧪 Testing with Postman
+> Adjust the commands and folder names if your repository uses a different project structure.
+
+## Postman API Testing
+
+If the repository includes `settlewise.postman_collection.json`:
 
 1. Open Postman.
-2. Click **Import** and select `settlewise.postman_collection.json`.
-3. Set the `baseUrl` collection variable to `http://localhost:3000`.
-4. Run requests in sequence:
-   - `1. PayPal Integration / Check PayPal Connection Status`
-   - `1. PayPal Integration / Create PayPal Sandbox Order`
-   - `1. PayPal Integration / Capture PayPal Payment`
-   - `2. Reconciliation Engine / Run Deterministic Reconciliation Batch`
-   - `3. Gemini AI Intelligence / Investigate Discrepant Transaction`
-   - `4. Settlement Center / Approve Settlement Action`
+2. Select **Import**.
+3. Import the SettleWise AI collection.
+4. Configure the `baseUrl` variable.
+5. Run the relevant requests.
 
----
+Suggested testing sequence:
 
-## ☁️ Deployment on Render
+1. Check PayPal connection status.
+2. Create a PayPal Sandbox order.
+3. Retrieve and capture the approved order.
+4. Run a reconciliation batch.
+5. Investigate a discrepant transaction using Gemini.
+6. Review and approve a settlement action.
+7. Verify webhook processing and audit records.
 
-This repository includes a production-ready Render Blueprint (`render.yaml`):
+## Security & Financial Governance
 
-1. Push this repository to GitHub.
-2. In the [Render Dashboard](https://dashboard.render.com), click **New +** → **Blueprint**.
-3. Select your repository.
-4. Render will provision:
-   - `settlewise-ai-app`: Full-Stack Node/React web service
-   - `settlewise-postgres`: Managed PostgreSQL database
-   - `settlewise-api-fastapi`: Optional Python FastAPI backend service
-5. Add your `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`, and `GEMINI_API_KEY` in the Render Environment Variables tab.
+SettleWise AI follows a human-controlled financial workflow.
 
----
+**1. No Silent Reconciliation**
 
-## 🔒 Security & Governance Principles
+Uncertain matches are sent for manual review rather than automatically marking invoices as paid.
 
-1. **Zero Silent Reconciliation:** Uncertain payments (<90% score or ambiguous candidate invoices) are placed in `MANUAL_REVIEW` and never marked as paid automatically.
-2. **AI Is Advisory Only:** Gemini AI outputs structured risk assessments and root-cause evidence. It cannot trigger payouts or mutate payment records without explicit user authorization.
-3. **No Key Exposure:** PayPal client secrets and Gemini API keys reside exclusively in backend environment variables and are never sent to browser bundles.
-4. **Idempotency & Webhook Deduplication:** Webhook event IDs are stored to prevent replay attacks and duplicate processing.
+**2. AI Is Advisory Only**
 
----
+AI-generated recommendations cannot independently execute payment captures, refunds, or settlement actions.
 
-## 📄 License
+**3. Secure Credential Handling**
 
-This project is licensed under the [MIT License](LICENSE).
+PayPal client secrets and Gemini API keys remain on the backend and are not exposed in frontend code.
+
+**4. Webhook Verification**
+
+PayPal webhook signatures should be verified before processing events.
+
+**5. Idempotent Event Processing**
+
+Webhook event IDs are tracked to prevent duplicate event processing.
+
+**6. Auditability**
+
+Important financial actions and approval decisions should be recorded for traceability.
+
+## Future Roadmap
+
+- Advanced multi-currency reconciliation.
+- More sophisticated payment anomaly analysis.
+- Automated invoice ingestion using OCR.
+- Multi-user finance team collaboration.
+- Role-based approval permissions.
+- Advanced cash-flow forecasting.
+- Additional payment gateway integrations.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Project Vision
+
+**SettleWise AI is built around one simple idea: financial operations should be intelligent, transparent, and accountable.**
+
+By combining deterministic reconciliation, AI-powered investigation, and PayPal payment infrastructure, SettleWise AI aims to make business settlements easier to understand and safer to manage.
+
+**Smarter Settlements. Stronger Business.**
