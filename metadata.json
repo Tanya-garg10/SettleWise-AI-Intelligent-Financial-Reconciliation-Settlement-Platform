@@ -1,0 +1,6 @@
+{
+  "name": "SettleWise AI",
+  "description": "Intelligent financial reconciliation and settlement intelligence platform connecting PayPal payment infrastructure with AG Grid and Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

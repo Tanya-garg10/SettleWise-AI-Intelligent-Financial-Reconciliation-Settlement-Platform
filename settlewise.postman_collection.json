@@ -1,0 +1,213 @@
+{
+  "info": {
+    "_postman_id": "c1f7a01d-55e1-4562-b912-32a821e29e01",
+    "name": "SettleWise AI — Postman API Collection",
+    "description": "Comprehensive Postman test collection for SettleWise AI payment reconciliation platform. Covers PayPal OAuth, Orders API, Payment Capture, Webhooks, Reconciliation Engine, and Gemini AI Investigations.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. PayPal Integration",
+      "item": [
+        {
+          "name": "Check PayPal Connection Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/paypal/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "paypal", "status"]
+            }
+          }
+        },
+        {
+          "name": "Create PayPal Sandbox Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 2200.00,\n  \"currency\": \"USD\",\n  \"invoiceId\": \"INV-1011\",\n  \"description\": \"Quarterly Security Audit\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/paypal/create-order",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "paypal", "create-order"]
+            }
+          }
+        },
+        {
+          "name": "Capture PayPal Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"orderId\": \"ORD-SANDBOX-7821\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/paypal/capture-order",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "paypal", "capture-order"]
+            }
+          }
+        },
+        {
+          "name": "Receive PayPal Webhook Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "paypal-auth-algo", "value": "SHA256withRSA" },
+              { "key": "paypal-transmission-id", "value": "test-transmission-001" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"WH-EVT-9921\",\n  \"event_type\": \"PAYMENT.CAPTURE.COMPLETED\",\n  \"summary\": \"Payment capture completed for $2,200.00 USD\",\n  \"resource\": {\n    \"id\": \"CAP-SANDBOX-1982\",\n    \"amount\": {\n      \"value\": \"2200.00\",\n      \"currency_code\": \"USD\"\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/paypal/webhook",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "paypal", "webhook"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Reconciliation Engine",
+      "item": [
+        {
+          "name": "Run Deterministic Reconciliation Batch",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/reconciliation/run",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "reconciliation", "run"]
+            }
+          }
+        },
+        {
+          "name": "Get Reconciliation Runs History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/reconciliation/runs",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "reconciliation", "runs"]
+            }
+          }
+        },
+        {
+          "name": "Approve Match Proposal (Human Review)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"APPROVED\",\n  \"reviewedBy\": \"Senior Controller\",\n  \"notes\": \"Approved based on verified customer reference\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/reconciliation/matches/MATCH-TXN-2011-INV-1006/review",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "reconciliation", "matches", "MATCH-TXN-2011-INV-1006", "review"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Gemini AI Intelligence",
+      "item": [
+        {
+          "name": "Investigate Discrepant Transaction",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transactionId\": \"TXN-2010\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/ai/investigate-transaction",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ai", "investigate-transaction"]
+            }
+          }
+        },
+        {
+          "name": "Ask AI Financial Assistant",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"Why is transaction TXN-2010 unmatched, and which invoices are currently overdue?\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/ai/chat",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ai", "chat"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Settlement Center",
+      "item": [
+        {
+          "name": "Get Settlement Recommendations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/settlements",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "settlements"]
+            }
+          }
+        },
+        {
+          "name": "Approve Settlement Action (Human Approval)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"decision\": \"APPROVE\",\n  \"approvedBy\": \"Tanya Garg (CFO)\",\n  \"note\": \"Authorized refund of accidental duplicate payment\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/settlements/SETTLE-001/approve",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "settlements", "SETTLE-001", "approve"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}

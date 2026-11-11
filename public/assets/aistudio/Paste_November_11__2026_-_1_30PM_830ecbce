@@ -1,0 +1,921 @@
+Tanya, SettleWise AI ko hum ek advanced Agentic FinTech platform ki tarah build karenge. Sirf dashboard + Gemini chatbot nahi. Isme actual PayPal Sandbox payment workflow, intelligent reconciliation engine, AI investigation agent, anomaly detection aur financial analytics honge.
+
+Meri recommendation hai ki hum hackathon ke sponsor tools mein se 3 ko primary integration banayein aur ek ko testing ke liye use karein.
+
+# 1. Sponsor tools – kaun-kaun se use karne hain?
+
+[PayPal | 2024 Campus Forward Award Winner](https://images.openai.com/static-rsc-4/u4MdyXn2mJi7apl0O4qINST9ztu9QfbVWbTjfqU236k97vmgS5BmbGsMWZffOyfJPviSVdSpw_2-eYN9UNl8KJBcoIWaIkBPJZCa0NqjAUhSp0nNMW4IGcXz-9DVjQwQVy7zfExMwGJLHSNeogFOl7rEaAvLhhXAVXJrgjbO1-M?purpose=inline)
+
+PayPal Developer Platform
+
+Mandatory · Core integration
+
+Orders API, payment capture, Sandbox and webhooks.
+
+[Branding Assets](https://images.openai.com/static-rsc-4/902q9tYK4j0gNf3RbhknOKChPZ9MiZkVX2CZPPvO29JDce1K7qQiU8VY-GJd2kffw45QPV91muPYQ7FPY9unkjlvNXQVU-B5Ic7CKD1gb5CckV-tfOAX5pKPmYgHN3Rou2PrpBuDw1XoU93p-4KoLXN8NSo4vl03y4YOzlHXMI8?purpose=inline)
+
+AG Grid
+
+Priority · Sponsor prize
+
+Advanced transaction reconciliation table, filters, sorting, grouping and data exploration.
+
+[Standard API Definitions Demystified | Nordic APIs |](https://images.openai.com/static-rsc-4/QqbGRs0ubEyetkWb2T2vCqAWowwNm_N1em-wG1p1O70_4GdxqSiXwOHFKhlBT0k_fVKbWmuSwBYoF3THM3ZTUaxz9nC7SHc6rO5H_lNy8eSoQEHfVtd2vsgSg35ZR48tyFm09C440Muve07Uz7YGNGRHh343nA2lm-hLG9Yfzdk?purpose=inline)
+
+APIMatic Context Plugin
+
+Priority · Sponsor prize
+
+Gives your coding agent accurate PayPal API integration context.
+
+[Render Logo PNG Vector (SVG) Free Download](https://images.openai.com/static-rsc-4/oq7qH5uZWzMUfvG9-lk6Z985BbkPKde4QxrcGgXEKV42zsgJVGuura8ruc0JA-_hfVua9f9f4hH7VdEMxuzkztY24UN0cb_FTqqTKLp-DeMnEGpjqaOdT8HPTjI8ajhDHu-Z_wFWR26vo47je-S6biWEeoy6fy3_nIdOTcPDA3Q?purpose=inline)
+
+Render
+
+Priority · Sponsor prize
+
+Host frontend, FastAPI backend and PostgreSQL database.
+
+[Visionco | services](https://images.openai.com/static-rsc-4/bDTDp-kPgMFGVhrV9CFYRBVY_fSLVnXtPoOpKhXLI7R_6Dwzy0vZ9Fy3dm60OSheomIpV9xh6oPBr_3yHRbF-nji9QjXWEQTk6IwrM2RFuYXFIVNtmk21msDsgCUnZAnB1dL215LsGFTPjnE9Ru9RMPG12V05n6oicPO-am4NKI?purpose=inline)
+
+Postman
+
+Additional · Testing
+
+Test PayPal API requests, webhook flows and backend endpoints.
+
+Why these five?
+
+- PayPal is the actual financial infrastructure.
+- AG Grid gives us a meaningful sponsor-specific feature.
+- APIMatic helps build the PayPal integration correctly.
+- Render provides the deployed working product.
+- Postman helps validate the complete API workflow.
+
+APIMatic's PayPal Context Plugin is available with the installation command below. It supports coding environments including Cursor, VS Code, Claude Code and Codex; Antigravity support is not explicitly listed.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://context.apimatic.io\&sz=32)
+
+APIMatic+4
+
+
+
+# 2. Install sponsor tools first
+
+APIMatic
+
+Open your coding agent's supported terminal and run:
+
+```
+npx context-plugins install paypal
+```
+
+This gives your coding agent PayPal-specific API context, including authentication, endpoints, integration workflows and error handling.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://context.apimatic.io\&sz=32)
+
+APIMatic+1
+
+
+
+AG Grid
+
+```
+npm install ag-grid-react ag-grid-community
+```
+
+Use the Community edition to implement transaction management and filtering.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ag-grid.com\&sz=32)
+
+AG Grid+1
+
+
+
+Postman
+
+Create a collection for:
+
+- PayPal OAuth authentication
+- Create order
+- Capture order
+- Transaction reconciliation
+- Webhook verification
+
+Render
+
+Connect the public GitHub repository and deploy the frontend, backend and database as separate services.
+
+# 3. Final product architecture
+
+## SettleWise AI
+
+INTELLIGENT FINANCIAL OPERATIONS PLATFORM
+
+React + Tailwind Frontend
+
+Dashboard · AG Grid · AI Assistant · Reports
+
+FastAPI Orchestration Layer
+
+Authentication · API · Validation · Business Logic
+
+PayPal Layer
+
+Orders · Captures · Webhooks
+
+Gemini AI
+
+Investigation · Insights · Reasoning
+
+Reconciliation & Decision Engine
+
+Matching · Risk · Duplicate Detection · Confidence
+
+PostgreSQL + Audit Trail
+
+Invoices · Payments · Decisions · Event History
+
+Human Approval → PayPal Sandbox Actions
+
+Deployment: Render · API development assistance: APIMatic · Testing: Postman
+
+# 4. Complete Antigravity master build prompt
+
+
+
+Copy entire prompt
+
+Full-stack implementation
+
+
+
+Paste this into Antigravity. First let it inspect the workspace, then build the complete application.
+
+```
+
+You are a senior fintech product architect, full-stack engineer, AI engineer, and product designer.
+
+Build a complete, production-quality hackathon application named:
+
+SETTLEWISE AI
+Tagline: Smarter Settlements. Stronger Business.
+
+PROJECT VISION:
+SettleWise AI is an intelligent financial reconciliation and settlement intelligence platform that connects PayPal payment infrastructure with AI-powered financial investigation.
+
+It helps businesses reconcile transactions with invoices, identify unmatched payments, detect duplicates, investigate anomalies, predict overdue invoices, and prepare settlement actions with human approval.
+
+IMPORTANT:
+Do not build a generic dashboard or chatbot.
+Build a functional end-to-end fintech application.
+Every major feature must have working interactions and backend functionality.
+Do not use fake buttons, dead links, or decorative-only components.
+Clearly distinguish actual PayPal Sandbox data from seeded demonstration records.
+
+==================================================
+PHASE 1 — TECHNOLOGY STACK
+==================================================
+
+Frontend:
+- React with Vite
+- TypeScript
+- Tailwind CSS
+- Lucide React
+- AG Grid Community
+- Recharts
+- React Router
+- Axios
+
+Backend:
+- Python 3.11+
+- FastAPI
+- Pydantic
+- SQLAlchemy
+- PostgreSQL
+- SQLite fallback for local development
+
+AI:
+- Google Gemini API
+- Structured JSON responses
+- Context-aware financial investigation
+- AI-powered recommendations
+
+Payment:
+- PayPal REST API
+- PayPal Sandbox
+- Orders API
+- Payment capture
+- Webhook event handling
+- Transaction reference management
+
+Deployment:
+- Render
+- Separate frontend and backend services
+- PostgreSQL database
+
+Developer tools:
+- APIMatic PayPal Context Plugin for integration guidance
+- Postman collection for API testing
+
+==================================================
+PHASE 2 — PREMIUM UI/UX DESIGN
+==================================================
+
+Create an exceptional fintech SaaS interface.
+
+Design direction:
+- Premium modern fintech product
+- Warm white background
+- Soft blue and lavender accents
+- Deep navy typography
+- Subtle gradients
+- Clean cards
+- Rounded corners
+- Elegant shadows
+- Beautiful charts
+- Consistent spacing
+- Professional typography
+- Responsive desktop and mobile layouts
+
+Avoid:
+- Generic AI dashboard designs
+- Excessive purple gradients
+- Dark-heavy interfaces
+- Cluttered layouts
+- Oversized unnecessary cards
+- Excessive animations
+
+Create a persistent sidebar with:
+
+1. Overview
+2. Transactions
+3. Reconciliation
+4. Invoices
+5. Anomaly Center
+6. Settlement Center
+7. AI Finance Assistant
+8. Reports
+9. Settings
+
+Top navigation:
+- Search
+- Notification center
+- PayPal connection status
+- User profile
+- Environment indicator (SANDBOX)
+
+Create a beautiful login screen and a demo workspace.
+
+==================================================
+PHASE 3 — OVERVIEW DASHBOARD
+==================================================
+
+Create a comprehensive financial overview.
+
+KPI cards:
+- Total Payment Volume
+- Reconciled Amount
+- Unmatched Transactions
+- Outstanding Invoices
+- Reconciliation Rate
+- Potential Anomalies
+
+Charts:
+- Payment volume over time
+- Reconciliation performance
+- Invoice status distribution
+- Daily transaction trends
+
+Additional sections:
+- Recent transactions
+- Pending reconciliation queue
+- Critical financial alerts
+- AI-generated financial summary
+- Recommended actions
+
+All dashboard metrics must be calculated from database records.
+
+Never hardcode dashboard statistics.
+
+==================================================
+PHASE 4 — TRANSACTION MANAGEMENT
+==================================================
+
+Build a powerful transaction management module using AG Grid.
+
+Columns:
+- Transaction ID
+- PayPal Reference
+- Customer
+- Amount
+- Currency
+- Payment Date
+- Payment Status
+- Invoice Reference
+- Reconciliation Status
+- Risk Indicator
+
+Implement:
+- Sorting
+- Filtering
+- Global search
+- Pagination
+- Column visibility
+- Amount filters
+- Date filters
+- Status filters
+- Export CSV
+- Transaction detail drawer
+
+Add transaction detail pages with:
+- Complete transaction information
+- Payment timeline
+- Associated invoice
+- Reconciliation explanation
+- AI investigation button
+- Audit history
+
+Use actual AG Grid Community components.
+
+==================================================
+PHASE 5 — INTELLIGENT RECONCILIATION ENGINE
+==================================================
+
+This is the central feature of SettleWise AI.
+
+Build a reconciliation engine using deterministic financial matching rules.
+
+Matching signals:
+- Exact invoice reference
+- Exact transaction amount
+- Customer identity
+- Transaction date
+- Description similarity
+- Partial payment relationships
+
+Create a weighted matching score.
+
+Example configurable scoring:
+- Invoice reference match: 35 points
+- Amount match: 30 points
+- Customer match: 15 points
+- Date proximity: 10 points
+- Description similarity: 10 points
+
+Classify results:
+- 90–100: High confidence
+- 70–89: Review recommended
+- Below 70: Manual investigation
+
+These scores are recommendations, not proof of payment identity.
+
+Handle:
+- Exact matches
+- Partial payments
+- Unmatched payments
+- Duplicate candidates
+- Multiple possible invoice matches
+- Overpayments
+- Underpayments
+
+Build:
+- Run Reconciliation button
+- Reconciliation progress indicator
+- Matched records
+- Unmatched records
+- Manual matching interface
+- Approve match action
+- Reject match action
+- Reconciliation history
+
+Never silently mark uncertain records as reconciled.
+
+All financial calculations must use decimal arithmetic.
+
+==================================================
+PHASE 6 — GEMINI AI INTELLIGENCE ENGINE
+==================================================
+
+Integrate Google Gemini API securely through the backend.
+
+Create a dedicated AI investigation service.
+
+Capabilities:
+
+1. Explain why a payment did not match an invoice.
+2. Summarise transaction discrepancies.
+3. Identify suspicious patterns for review.
+4. Explain potential duplicate transactions.
+5. Analyse overdue invoices.
+6. Generate business financial summaries.
+7. Recommend next steps.
+8. Answer questions using authorised database context.
+
+AI INVESTIGATION OUTPUT:
+
+Return structured information:
+
+{
+  "summary": "Explanation",
+  "issue_type": "amount_mismatch",
+  "risk_level": "medium",
+  "confidence": 0.87,
+  "evidence": [],
+  "recommended_actions": [],
+  "requires_human_review": true
+}
+
+Important:
+- AI must never invent transaction records.
+- AI must only analyse supplied financial context.
+- Never let AI independently modify payment statuses.
+- Never expose API keys.
+- Validate Gemini responses.
+- Show AI-generated insights as recommendations.
+
+==================================================
+PHASE 7 — ANOMALY DETECTION CENTER
+==================================================
+
+Create a separate financial anomaly investigation module.
+
+Detect:
+- Potential duplicate payments
+- Unusual payment amounts
+- Unexpected currency changes
+- Repeated failed payment attempts
+- Invoice amount discrepancies
+- Unmatched transactions
+- Unusual payment frequency
+
+Implement explainable rule-based detection first.
+
+Use Gemini to explain the findings.
+
+Create an anomaly investigation interface with:
+- Severity
+- Transaction reference
+- Detection reason
+- Supporting evidence
+- AI explanation
+- Suggested resolution
+- Review status
+
+Do not claim that heuristic flags prove fraud.
+
+==================================================
+PHASE 8 — PAYPAL INTEGRATION
+==================================================
+
+PayPal is a mandatory central component.
+
+Use the official PayPal REST API and Sandbox environment.
+
+Implement:
+
+1. OAuth 2.0 access token generation.
+2. Create PayPal order.
+3. Retrieve order details.
+4. Approve payment using PayPal checkout.
+5. Capture approved payment.
+6. Save PayPal order and capture references.
+7. Handle API errors.
+8. Maintain payment status history.
+9. Implement webhook event processing.
+10. Verify webhook signatures using PayPal verification mechanisms.
+
+Use supported PayPal API endpoints and APIMatic Context Plugin guidance.
+
+Sandbox API base URL:
+https://api-m.sandbox.paypal.com
+
+Create a PayPal integration service with separate modules for:
+- Authentication
+- Orders
+- Captures
+- Webhooks
+- Error handling
+
+Required security:
+- Store Client ID and Secret in backend environment variables.
+- Never expose Client Secret to React.
+- Never simulate successful payment capture.
+- Verify payment state through PayPal responses.
+- Use idempotency protection where supported.
+- Store webhook event IDs to prevent duplicate processing.
+
+Webhook events should include relevant checkout approval and capture completion events.
+
+Create a Payment Activity screen.
+
+Display:
+- PayPal order ID
+- Capture ID
+- Amount
+- Currency
+- Payment state
+- Event timestamp
+- Source (Sandbox / Demo)
+
+Also provide a clear sandbox connection indicator.
+
+If credentials are unavailable, show a properly labelled setup state instead of claiming a successful PayPal connection.
+
+==================================================
+PHASE 9 — SMART SETTLEMENT CENTER
+==================================================
+
+Create an intelligent settlement management workspace.
+
+Show:
+- Pending settlement recommendations
+- Unmatched payment resolutions
+- Outstanding invoice actions
+- Payment status
+- Required approval
+
+Create a human approval workflow:
+
+AI Recommendation
+      ↓
+Financial Validation
+      ↓
+User Review
+      ↓
+Explicit Approval
+      ↓
+PayPal Sandbox Action
+      ↓
+Verified Result
+      ↓
+Audit Trail
+
+No financial action should happen simply because Gemini recommended it.
+
+Include:
+- Review action
+- Approve action
+- Reject action
+- Confirmation modal
+- Execution result
+- Transaction history
+
+Do not implement unauthorized transfers or automatic payouts.
+
+==================================================
+PHASE 10 — AI FINANCE ASSISTANT
+==================================================
+
+Create a polished conversational AI interface.
+
+Example questions:
+
+- Why is transaction PAY-1003 unmatched?
+- Which invoices are overdue?
+- Find possible duplicate payments.
+- Explain today's reconciliation results.
+- What is our total outstanding balance?
+- Summarise this month's financial activity.
+
+The assistant must retrieve relevant records from the backend and use Gemini to formulate explanations.
+
+Include suggested questions and source transaction links.
+
+Never invent financial figures.
+
+==================================================
+PHASE 11 — INVOICE MANAGEMENT
+==================================================
+
+Implement:
+- Create invoice
+- Edit invoice
+- View invoice
+- Customer information
+- Invoice reference
+- Amount
+- Currency
+- Issue date
+- Due date
+- Invoice status
+- Payment association
+
+Support:
+- Unpaid
+- Partially paid
+- Paid
+- Overdue
+
+Implement partial payment allocation and accurate outstanding balance calculations.
+
+Create a PayPal checkout action for eligible invoices.
+
+==================================================
+PHASE 12 — REPORTS & AUDIT TRAIL
+==================================================
+
+Build:
+- Reconciliation summary
+- Payment performance
+- Outstanding invoice report
+- Anomaly report
+- Settlement activity report
+
+Allow CSV export.
+
+Maintain an audit log for:
+- Transaction imports
+- Reconciliation runs
+- Match approvals
+- Match rejections
+- AI investigations
+- Payment creation
+- Payment capture
+- Webhook events
+- User approval actions
+
+Audit records should be timestamped and immutable through normal application workflows.
+
+==================================================
+PHASE 13 — DATABASE DESIGN
+==================================================
+
+Create appropriate database models:
+
+- Users
+- Customers
+- Invoices
+- Transactions
+- ReconciliationRuns
+- ReconciliationMatches
+- AnomalyAlerts
+- AIInvestigations
+- SettlementRecommendations
+- PaymentOrders
+- PaymentCaptures
+- WebhookEvents
+- AuditLogs
+
+Use appropriate:
+- Foreign keys
+- Indexes
+- Unique constraints
+- Decimal amount fields
+- UTC timestamps
+- Database migrations
+
+Use database transactions for sensitive financial state changes.
+
+==================================================
+PHASE 14 — DEMO DATA
+==================================================
+
+Create a realistic demonstration workspace with:
+
+- 25 invoices
+- 35 payment records
+- Exact matches
+- Partial payments
+- Unmatched transactions
+- Duplicate candidates
+- Amount mismatches
+- Overdue invoices
+
+Use clearly labelled DEMO records.
+
+Create a one-click demo data seeding feature.
+
+Demo data must not be represented as real PayPal transactions.
+
+Allow importing CSV files for business invoice and transaction records.
+
+==================================================
+PHASE 15 — RENDER DEPLOYMENT
+==================================================
+
+Prepare the project for deployment on Render.
+
+Create:
+- Frontend service configuration
+- FastAPI backend service configuration
+- PostgreSQL database configuration
+- Environment variable documentation
+- Health check endpoint
+- Production build configuration
+- CORS configuration
+- Render Blueprint YAML if appropriate
+
+Create a complete .env.example.
+
+Never commit secrets.
+
+Support both local development and hosted deployment.
+
+==================================================
+PHASE 16 — QUALITY ASSURANCE
+==================================================
+
+Write tests for:
+
+- Transaction matching
+- Partial payment allocation
+- Duplicate detection
+- Invoice balances
+- AI response validation
+- PayPal authentication
+- PayPal order creation
+- Payment capture
+- Webhook verification
+- API error handling
+
+Test important frontend interactions.
+
+Add useful error messages and loading states.
+
+Ensure there are no broken routes or dead buttons.
+
+==================================================
+PHASE 17 — FINAL DOCUMENTATION
+==================================================
+
+Generate:
+
+1. Professional README.md
+2. MIT LICENSE
+3. .env.example
+4. Complete setup instructions
+5. System architecture diagram
+6. API documentation
+7. Database schema explanation
+8. PayPal Sandbox configuration guide
+9. Gemini API setup guide
+10. Render deployment instructions
+11. Postman collection
+12. Demo workflow instructions
+
+Explain exactly which sponsor technologies are used and where.
+
+==================================================
+FINAL ACCEPTANCE CRITERIA
+==================================================
+
+The completed project must:
+
+- Start successfully locally.
+- Have a polished, responsive interface.
+- Have a working FastAPI backend.
+- Have persistent database storage.
+- Have a functional AG Grid transaction table.
+- Perform real reconciliation calculations.
+- Use Gemini for contextual financial investigation.
+- Integrate PayPal Sandbox checkout and capture.
+- Handle verified PayPal webhook events.
+- Maintain an audit trail.
+- Include a working human approval process.
+- Include realistic and clearly labelled demo records.
+- Have no fake successful payment claims.
+- Be ready for public GitHub submission.
+- Be ready for Render deployment.
+
+DEVELOPMENT INSTRUCTIONS:
+
+First inspect the existing workspace.
+
+If empty, create the complete project structure.
+
+Build the application in logical phases, but do not stop after generating a landing page or static UI.
+
+Run the backend and frontend.
+Install dependencies.
+Fix build errors.
+Run tests.
+Verify API communication.
+Verify important workflows.
+
+If credentials are missing, build the integration correctly and document exactly which environment variables are required.
+
+Do not ask unnecessary questions. Make sensible engineering decisions and continue implementation.
+
+Your final output must include:
+- What was implemented
+- Project folder structure
+- Commands to run locally
+- Required API credentials
+- Test results
+- Remaining deployment steps
+
+Build SettleWise AI as a complete, working, judge-ready fintech product.
+
+```
+
+# 5. Environment variables you will need
+
+Antigravity should create `.env.example` with these variables:
+
+```
+
+# Backend
+DATABASE_URL=sqlite:///./settlewise.db
+SECRET_KEY=replace_with_secure_random_value
+FRONTEND_URL=http://localhost:5173
+
+# Google Gemini
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=your_available_gemini_model
+
+# PayPal Sandbox
+PAYPAL_CLIENT_ID=your_sandbox_client_id
+PAYPAL_CLIENT_SECRET=your_sandbox_client_secret
+PAYPAL_BASE_URL=https://api-m.sandbox.paypal.com
+PAYPAL_WEBHOOK_ID=your_webhook_id
+
+# Environment
+APP_ENV=development
+
+```
+
+Get your PayPal Client ID and Secret from the Developer Dashboard. PayPal uses OAuth 2.0, and its Sandbox environment provides separate buyer and business test accounts.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://developer.paypal.com\&sz=32)
+
+PayPal Developer+1
+
+
+
+# 6. Three-day execution plan
+
+1. Day 1 – Build the core product
+   - Complete React dashboard and sidebar.
+   - Backend and database.
+   - AG Grid transactions.
+   - Invoice management.
+   - Reconciliation engine.
+2. Day 2 – AI + PayPal
+   - Gemini investigation.
+   - Anomaly detection.
+   - PayPal Sandbox checkout and capture.
+   - Webhook verification.
+   - Human approval workflow.
+3. Day 3 – Polish + submission
+   - Postman API testing.
+   - Render deployment.
+   - GitHub README and MIT License.
+   - End-to-end testing.
+   - Record a 2–3 minute demo video.
+
+# 7. Useful official resources
+
+- [image](https://www.google.com/s2/favicons?domain=https://developer.paypal.com\&sz=32)
+
+  [PayPal REST API documentation](https://developer.paypal.com/api/rest/?utm_source=chatgpt.com)
+- [image](https://www.google.com/s2/favicons?domain=https://context.apimatic.io\&sz=32)
+
+  [APIMatic PayPal Context Plugin](https://context.apimatic.io/plugins/paypal/?utm_source=chatgpt.com)
+- [image](https://www.google.com/s2/favicons?domain=https://www.ag-grid.com\&sz=32)
+
+  [AG Grid React documentation](https://www.ag-grid.com/react-data-grid/getting-started/?utm_source=chatgpt.com)
+- [image](https://www.google.com/s2/favicons?domain=https://render.com\&sz=32)
+
+  [Render deployment documentation](https://render.com/docs?utm_source=chatgpt.com)
+- [image](https://www.google.com/s2/favicons?domain=https://www.postman.com\&sz=32)
+
+  [Postman API testing](https://www.postman.com/?utm_source=chatgpt.com)
+
+## 8. One important hackathon-winning suggestion
+
+Don't try to integrate every sponsor just for the sake of adding logos.
+
+I'd prioritize these three sponsor awards:
+
+Best Use of AG Grid
+
+## $5,000
+
+Build a genuinely powerful reconciliation workspace with transaction grouping, filtering, custom columns and analytics.
+
+Best Use of APIMatic
+
+## $1,000
+
+Use its PayPal Context Plugin while implementing and documenting your actual PayPal integration.
+
+Best Use of Render
+
+## Credits
+
+Deploy the actual frontend, backend and database, and demonstrate the hosted product.
+
+These are listed sponsor award categories in the hackathon.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://paypalaihackathon.devpost.com\&sz=32)
+
+Devpost+2
+
+
+
+One last thing: Since your Render workspace previously showed an upgrade prompt, build and test everything locally first. Don't let deployment block the core PayPal + AI functionality.
+
+My suggested development order is: Reconciliation Engine → PayPal Integration → Gemini Intelligence → AG Grid → Render.
+
+This will give SettleWise AI a much stronger technical foundation and a convincing end-to-end demo.
